@@ -38,8 +38,10 @@ export const metadata = {
 		],
 	},
 	icons: {
-		icon: '/favicon.ico',
-		shortcut: '/favicon-16x16.png',
+		icon: {
+			url: '/favicon.ico',
+			type: 'image/x-icon',
+		},
 		apple: '/apple-touch-icon.png',
 	},
 	manifest: `${siteConfig.url}/site.webmanifest`,
