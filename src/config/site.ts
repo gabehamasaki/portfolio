@@ -13,7 +13,7 @@ const ownerInfo = {
 };
 
 export const siteConfig = {
-	name: 'Hamasaki',
+	name: 'Gabriel Hamasaki',
 	url: '',
 	ogImage: '',
 	description: '',
