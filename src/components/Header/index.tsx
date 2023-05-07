@@ -5,6 +5,12 @@ import { useState } from 'react';
 import MenuButton from '../MenuButton';
 import MenuItem from '../MenuItem';
 
+/*
+					<span className='text-2xl font-light'>{'<'}</span>
+					<h1 className='text-xl'>Gabriel Hamasaki</h1>
+					<span className='text-2xl font-light'>{'/>'}</span>
+*/
+
 export function Header() {
 	const [selected, setSelected] = useState(0);
 	const items = ['About Me', 'Projects', 'Journey'];
@@ -13,15 +19,15 @@ export function Header() {
 			<div className='container h-full flex items-center justify-between'>
 				<motion.div
 					whileHover={{
-						scale: 1.2,
+						y: -2,
 					}}
+					className=''
 				>
 					<Image
-						src='/favicon.svg'
-						width={65}
-						height={65}
+						src='/img/logo.png'
+						width={50}
+						height={50}
 						alt='Gabriel Hamasaki'
-						className='p-1'
 					/>
 				</motion.div>
 				<div>

@@ -13,7 +13,6 @@ type Props = {
 export default function MenuItem(props: Props) {
 	return (
 		<motion.a
-			animate={{ opacity: props.selected ? 1 : 0.5 }}
 			onClick={props.onClick}
 			href={props.href}
 			className='relative transition-all hover:underline hover:brightness-150 border-b p-2 cursor-pointer'
