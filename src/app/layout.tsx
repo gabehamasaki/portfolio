@@ -55,10 +55,10 @@ export default function RootLayout({
 	return (
 		<html lang='pt-br'>
 			<body
-				className={`min-h-screen flex flex-col font-sans antialiased ${fontSans.variable}`}
+				className={`min-h-screen h-full flex flex-col font-sans antialiased ${fontSans.variable}`}
 			>
 				<Header />
-				<div className='container mt-6'>{children}</div>
+				<div className='container flex-grow pt-24'>{children}</div>
 			</body>
 		</html>
 	);

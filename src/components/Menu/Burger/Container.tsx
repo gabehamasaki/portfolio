@@ -13,6 +13,7 @@ export default function Container({ isOpen, children }: Props) {
 					? '2px solid hsl(var(--border))'
 					: '0px solid hsl(var(--border))',
 				width: isOpen ? '260px' : '0px',
+				height: '100%',
 			}}
 			className='h-full max-md:block hidden bg-secondary fixed top-0 left-0 overflow-hidden'
 		>
