@@ -6,7 +6,7 @@ type Props = {
 	children: React.ReactNode;
 };
 
-export default function MenuButton(props: Props) {
+export default function Button(props: Props) {
 	return (
 		<motion.button
 			whileHover={{
