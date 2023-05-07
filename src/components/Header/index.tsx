@@ -11,7 +11,7 @@ export function Header() {
 	const [isOpen, toggleOpen] = useCycle(false, true);
 	return (
 		<div>
-			<header className='sticky top-0 left-0 w-full h-20 bg-background border-b-2'>
+			<header className='fixed top-0 left-0 w-full h-20 bg-background border-b-2'>
 				<div className='container h-full flex items-center justify-between max-md:justify-center'>
 					<motion.div
 						whileHover={{

@@ -41,7 +41,7 @@ export default function Burger(props: MenuProps) {
 			</Container>
 			<div
 				onClick={() => toggleOpen()}
-				className='max-md:block hidden absolute top-5 left-5'
+				className='max-md:block hidden fixed top-5 left-5'
 			>
 				<List width={32} height={32} />
 			</div>

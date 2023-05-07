@@ -14,7 +14,7 @@ export default function Container({ isOpen, children }: Props) {
 					: '0px solid hsl(var(--border))',
 				width: isOpen ? '260px' : '0px',
 			}}
-			className='h-full max-md:block hidden bg-secondary absolute top-0 left-0 overflow-hidden'
+			className='h-full max-md:block hidden bg-secondary fixed top-0 left-0 overflow-hidden'
 		>
 			{children}
 		</motion.div>
