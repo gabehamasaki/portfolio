@@ -7,18 +7,15 @@ import Tilt from 'react-parallax-tilt';
 export default function Home() {
 	return (
 		<main className='w-full h-full'>
-			<section
-				className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-center gap-8'
-				id='top'
-			>
+			<section className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-center gap-8'>
 				<div className='flex flex-col justify-between gap-4'>
-					<h1 className='text-4xl max-md:text-2xl flex flex-col w-full'>
+					<h1 className='text-4xl max-md:text-3xl flex flex-col w-full'>
 						I am
 						<span className='text-primary font-bold text-7xl max-md:text-6xl max-sm:text-4xl max-xs:text-xl'>
 							Software <span className='text-purple-900'>Engineer</span>
 						</span>
 					</h1>
-					<div className='w-full h-1 rounded-lg bg-border'></div>
+					<div className='w-full h-1 rounded-lg bg-border animate-pulse'></div>
 					<div className='max-w-[40rem] flex justify-center items-center gap-8'>
 						<Image
 							src='/img/react.png'

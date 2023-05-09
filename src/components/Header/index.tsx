@@ -14,7 +14,7 @@ export function Header() {
 
 	useEffect(() => {
 		const handleScrollButtonVisibility = () => {
-			window.pageYOffset > 300 ? setShownButton(true) : setShownButton(false);
+			window.pageYOffset > 450 ? setShownButton(true) : setShownButton(false);
 		};
 		window.addEventListener('scroll', handleScrollButtonVisibility);
 
