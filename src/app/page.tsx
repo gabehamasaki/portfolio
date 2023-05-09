@@ -3,19 +3,29 @@
 import * as Avatar from '@radix-ui/react-avatar';
 import Image from 'next/image';
 import Tilt from 'react-parallax-tilt';
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
 	return (
 		<main className='w-full h-full'>
-			<section className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-center gap-8'>
-				<div className='flex flex-col justify-between gap-4'>
-					<h1 className='text-4xl max-md:text-3xl flex flex-col w-full'>
-						I am
-						<span className='text-primary font-bold text-7xl max-md:text-6xl max-sm:text-4xl max-xs:text-xl'>
-							Software <span className='text-purple-900'>Engineer</span>
-						</span>
-					</h1>
-					<div className='w-full h-1 rounded-lg bg-border animate-pulse'></div>
+			<section className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-between p-8 max-sm:p-4'>
+				<div className='w-full max-w-lg max-lg:max-w-full flex flex-col justify-between'>
+					<div className='flex flex-col w-full max-lg:items-center'>
+						<h1 className='text-4xl font-light max-md:text-3xl'>I am</h1>
+						<h1 className='text-primary font-bold text-5xl max-md:text-4xl max-sm:text-3xl max-xs:text-xl'>
+							<Typewriter
+								options={{
+									strings: [
+										'Software <span class="text-purple-900">Engineer</span>',
+										'<span class="text-purple-900">Fullstack</span> Developer',
+									],
+									autoStart: true,
+									loop: true,
+								}}
+							/>
+						</h1>
+					</div>
+					<div className='w-full h-1 rounded-lg bg-border animate-pulse mb-4 mt-2'></div>
 					<div className='max-w-[40rem] flex justify-center items-center gap-8'>
 						<Image
 							src='/img/react.png'
