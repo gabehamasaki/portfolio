@@ -53,12 +53,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='pt-br'>
+		<html lang='pt-br' className='scroll-smooth'>
 			<body
 				className={`min-h-screen h-full flex flex-col font-sans antialiased ${fontSans.variable}`}
 			>
 				<div id='top'></div>
-				<div className='container flex-grow pt-24'>{children}</div>
+				<div className='flex-grow pt-24'>{children}</div>
 
 				<Header />
 			</body>

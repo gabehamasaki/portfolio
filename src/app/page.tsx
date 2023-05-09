@@ -7,8 +7,8 @@ import Typewriter from 'typewriter-effect';
 
 export default function Home() {
 	return (
-		<main className='w-full h-full'>
-			<section className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-between p-8 max-sm:p-4'>
+		<main className='w-full h-screen container'>
+			<section className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-between p-8 max-sm:p-4 '>
 				<div className='w-full max-w-lg max-lg:max-w-full flex flex-col justify-between'>
 					<div className='flex flex-col w-full max-lg:items-center'>
 						<h1 className='text-4xl font-light max-md:text-3xl'>I am</h1>
@@ -73,18 +73,24 @@ export default function Home() {
 			</section>
 			<section
 				id='about'
-				className='w-full min-h-screen flex items-center justify-center flex-col'
+				className='w-full h-screen min-h-screen flex items-center justify-center flex-col'
 			>
 				<h1 className='text-6xl text-primary mb-16 font-bold'>About Me</h1>
 				<div className='flex max-lg:flex-col gap-16 items-center justify-center'>
-					<div className=''>
+					<Tilt
+						tiltMaxAngleX={5}
+						tiltMaxAngleY={5}
+						transitionSpeed={2000}
+						className='max-lg:hidden animate-pulse'
+					>
 						<Avatar.Root>
 							<Avatar.Image
 								src='/img/me.jpg'
 								className='h-1/3 w-80 rounded-xl saturate-0 transition-all hover:saturate-100 select-none border-2'
 							/>
 						</Avatar.Root>
-					</div>
+					</Tilt>
+
 					<div className='w-full max-w-2xl h-full flex flex-col gap-4 text-primary'>
 						<div className='mb-4'>
 							<p className='text-2xl font-bold'>Gabriel Hamasaki</p>
