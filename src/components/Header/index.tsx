@@ -3,6 +3,7 @@ import { CaretUp } from '@phosphor-icons/react';
 import { motion, useCycle } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 import { Menu } from '../Menu';
 import Burger from '../Menu/Burger';
 
@@ -52,14 +53,22 @@ export function Header() {
 				selected={selected}
 				setSelected={setSelected}
 			/>
-			<motion.a
+			<motion.div
 				animate={{ opacity: isShownButton ? 1 : 0 }}
-				className='w-16 h-16 rounded-full bg-secondary fixed bottom-8 right-8 flex items-center justify-center text-3xl font-bold'
-				href='#top'
-				onClick={() => setSelected(-1)}
+				className='w-16 h-16 rounded-full bg-secondary fixed bottom-8 right-8 flex items-center justify-center'
 			>
-				<CaretUp />
-			</motion.a>
+				<Link
+					to='top'
+					spy={true}
+					smooth={true}
+					offset={50}
+					duration={100}
+					className='w-full h-full flex items-center justify-center text-3xl font-bold'
+					onClick={() => setSelected(-1)}
+				>
+					<CaretUp />
+				</Link>
+			</motion.div>
 		</>
 	);
 }

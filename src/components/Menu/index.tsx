@@ -17,7 +17,7 @@ export function Menu(props: MenuProps) {
 					key={index}
 					selected={selected === index}
 					onClick={() => setSelected(index)}
-					href={`#${item.split(' ')[0].toLowerCase()}`}
+					href={`${item.split(' ')[0].toLowerCase()}`}
 				>
 					{item}
 				</Item>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 type Props = {
 	href?: string;
@@ -12,11 +13,17 @@ type Props = {
 
 export default function Item(props: Props) {
 	return (
-		<ul className='flex flex-col items-center justify-center'>
-			<motion.a
-				animate={{ opacity: props.selected ? 1 : 0.5 }}
+		<motion.ul
+			animate={{ opacity: props.selected ? 1 : 0.5 }}
+			className='flex flex-col items-center justify-center'
+		>
+			<Link
+				to={props.href ? props.href : ''}
+				spy={true}
+				smooth={true}
+				offset={50}
+				duration={100}
 				onClick={props.onClick}
-				href={props.href}
 				className='relative transition-all hover:underline hover:brightness-150 border-b p-2 cursor-pointer'
 			>
 				{props.children}
@@ -26,7 +33,7 @@ export default function Item(props: Props) {
 						layoutId='underline'
 					/>
 				)}
-			</motion.a>
-		</ul>
+			</Link>
+		</motion.ul>
 	);
 }
