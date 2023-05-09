@@ -81,12 +81,14 @@ export default function Home() {
 					<div className='w-full max-w-2xl h-full flex flex-col gap-4 text-primary'>
 						<div className='mb-4'>
 							<p className='text-2xl font-bold'>Gabriel Hamasaki</p>
-							<p className='text-xl font-light'>20 Year Old</p>
+							<p className='text-xl font-light'>
+								{new Date().getFullYear() - 2003} Year Old
+							</p>
 						</div>
 						<p className='text-xl'>
 							I am an enthusiastic software developer who is deeply passionate
-							about technology. At present, I am pursuing a degree in Software
-							Engineering from Estácio-SP.
+							about technology. At present, I am pursuing a bachelor degree in
+							Software Engineering from Estácio - SP.
 						</p>
 						<p className='text-xl'>
 							My primary areas of expertise include Golang and NodeJS, and I
