@@ -1,18 +1,32 @@
 'use client';
+import { CaretUp } from '@phosphor-icons/react';
 import { motion, useCycle } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu } from '../Menu';
 import Burger from '../Menu/Burger';
 
 export function Header() {
 	const items = ['About Me', 'Projects', 'Journey'];
-	const [selected, setSelected] = useState(0);
+	const [selected, setSelected] = useState(-1);
 	const [isOpen, toggleOpen] = useCycle(false, true);
+	const [isShownButton, setShownButton] = useState(false);
+
+	useEffect(() => {
+		const handleScrollButtonVisibility = () => {
+			window.pageYOffset > 300 ? setShownButton(true) : setShownButton(false);
+		};
+		window.addEventListener('scroll', handleScrollButtonVisibility);
+
+		return () => {
+			window.removeEventListener('scroll', handleScrollButtonVisibility);
+		};
+	}, []);
+
 	return (
 		<>
 			<header className='fixed top-0 left-0 w-full h-20 bg-background border-b-2'>
-				<div className='container h-full flex items-center justify-between max-md:justify-center'>
+				<div className='container bg-background h-full flex items-center justify-between max-md:justify-center'>
 					<motion.div
 						whileHover={{
 							y: -2,
@@ -20,7 +34,7 @@ export function Header() {
 					>
 						<Image
 							src='/img/logo.png'
-							width={256}
+							width={280}
 							height={50}
 							alt='Gabriel Hamasaki'
 							className='p-6'
@@ -38,6 +52,14 @@ export function Header() {
 				selected={selected}
 				setSelected={setSelected}
 			/>
+			<motion.a
+				animate={{ opacity: isShownButton ? 1 : 0 }}
+				className='w-16 h-16 rounded-full bg-secondary fixed bottom-8 right-8 flex items-center justify-center text-3xl font-bold'
+				href='#top'
+				onClick={() => setSelected(-1)}
+			>
+				<CaretUp />
+			</motion.a>
 		</>
 	);
 }
