@@ -7,8 +7,8 @@ import Typewriter from 'typewriter-effect';
 
 export default function Home() {
 	return (
-		<main className='w-full h-screen container'>
-			<section className='w-full min-h-[calc(100vh-6rem)] flex items-center justify-between p-8 max-sm:p-4 '>
+		<main className='w-full h-screen container snap-mandatory snap-y'>
+			<section className='w-full h-screen flex items-center justify-between p-4 max-sm:p-4 snap-always snap-center'>
 				<div className='w-full max-w-lg max-lg:max-w-full flex flex-col justify-between'>
 					<div className='flex flex-col w-full max-lg:items-center'>
 						<h1 className='text-4xl font-light max-md:text-3xl'>I am</h1>
@@ -73,7 +73,7 @@ export default function Home() {
 			</section>
 			<section
 				id='about'
-				className='w-full h-screen min-h-screen flex items-center justify-center flex-col'
+				className='w-full h-screen flex items-center justify-center flex-col snap-always snap-center'
 			>
 				<h1 className='text-6xl text-primary mb-16 font-bold'>About Me</h1>
 				<div className='flex max-lg:flex-col gap-16 items-center justify-center'>

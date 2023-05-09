@@ -58,7 +58,7 @@ export default function RootLayout({
 				className={`min-h-screen h-full flex flex-col font-sans antialiased ${fontSans.variable}`}
 			>
 				<div id='top'></div>
-				<div className='flex-grow pt-24'>{children}</div>
+				{children}
 
 				<Header />
 			</body>
