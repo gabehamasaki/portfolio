@@ -62,7 +62,7 @@ export function Header() {
 					spy={true}
 					smooth={true}
 					offset={50}
-					duration={100}
+					duration={500}
 					className='w-full h-full flex items-center justify-center text-3xl font-bold'
 					onClick={() => setSelected(-1)}
 				>

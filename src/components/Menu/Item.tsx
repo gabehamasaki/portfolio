@@ -22,7 +22,7 @@ export default function Item(props: Props) {
 				spy={true}
 				smooth={true}
 				offset={50}
-				duration={100}
+				duration={500}
 				onClick={props.onClick}
 				className='relative transition-all hover:underline hover:brightness-150 border-b p-2 cursor-pointer'
 			>
