@@ -2,13 +2,18 @@
 
 import * as Avatar from '@radix-ui/react-avatar';
 import Image from 'next/image';
+import { useRef } from 'react';
 import Tilt from 'react-parallax-tilt';
+import useScrollSnap from 'react-use-scroll-snap';
 import Typewriter from 'typewriter-effect';
 
 export default function Home() {
+	const scrollRef = useRef(null);
+	useScrollSnap({ ref: scrollRef, duration: 100, delay: 0 });
+
 	return (
-		<main className='w-full h-screen container snap-mandatory snap-y'>
-			<section className='w-full h-screen flex items-center justify-between p-4 max-sm:p-4 snap-always snap-center'>
+		<main className='w-full h-screen container' ref={scrollRef}>
+			<section className='w-full h-screen flex items-center justify-between p-4 max-sm:p-4'>
 				<div className='w-full max-w-lg max-lg:max-w-full flex flex-col justify-between'>
 					<div className='flex flex-col w-full max-lg:items-center'>
 						<h1 className='text-4xl font-light max-md:text-3xl'>I am</h1>
@@ -73,7 +78,7 @@ export default function Home() {
 			</section>
 			<section
 				id='about'
-				className='w-full h-screen flex items-center justify-center flex-col snap-always snap-center'
+				className='w-full h-screen flex items-center justify-center flex-col'
 			>
 				<h1 className='text-6xl text-primary mb-16 font-bold'>About Me</h1>
 				<div className='flex max-lg:flex-col gap-16 items-center justify-center'>

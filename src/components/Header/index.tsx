@@ -26,8 +26,8 @@ export function Header() {
 
 	return (
 		<>
-			<header className='fixed top-0 left-0 w-full h-20 bg-background border-b-2'>
-				<div className='container bg-background h-full flex items-center justify-between max-md:justify-center'>
+			<header className='fixed top-0 left-0 w-full h-20 border-b-2 backdrop-blur-xl bg-background/30'>
+				<div className='container h-full flex items-center justify-between max-md:justify-center'>
 					<motion.div
 						whileHover={{
 							y: -2,
@@ -61,7 +61,6 @@ export function Header() {
 					to='top'
 					spy={true}
 					smooth={true}
-					offset={50}
 					duration={500}
 					className='w-full h-full flex items-center justify-center text-3xl font-bold'
 					onClick={() => setSelected(-1)}

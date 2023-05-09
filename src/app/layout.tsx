@@ -53,7 +53,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='pt-br' className='scroll-smooth'>
+		<html lang='pt-br'>
 			<body
 				className={`min-h-screen h-full flex flex-col font-sans antialiased ${fontSans.variable}`}
 			>
