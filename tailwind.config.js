@@ -14,39 +14,20 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				border: 'hsl(216 34% 17%)',
+				input: 'hsl(216 34% 17%)',
+				ring: 'hsl(216 34% 17%)',
+				background: 'hsl(224 71% 4%)',
+				foreground: 'hsl(213 31% 91%)',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
+					DEFAULT: 'hsl(210 40% 98%)',
+					foreground: 'hsl(222.2, 47.4%, 1.2%)',
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))',
+					DEFAULT: 'hsl(222.2, 47.4%, 11.2%)',
+					foreground: 'hsl(210 40% 98%)',
 				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))',
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))',
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))',
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))',
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))',
-				},
+				rose: '#ff0048',
 			},
 			borderRadius: {
 				lg: `var(--radius)`,
@@ -55,20 +36,6 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ['var(--font-sans)', ...fontFamily.sans],
-			},
-			keyframes: {
-				'accordion-down': {
-					from: { height: 0 },
-					to: { height: 'var(--radix-accordion-content-height)' },
-				},
-				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: 0 },
-				},
-			},
-			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
 			},
 		},
 	},

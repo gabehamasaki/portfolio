@@ -29,7 +29,7 @@ export default function Item(props: Props) {
 				{props.children}
 				{props.selected && (
 					<motion.div
-						className='absolute top-full left-0 w-full h-1 rounded-lg bg-primary opacity-80'
+						className='absolute top-full left-0 w-full h-1 rounded-lg bg-rose opacity-80'
 						layoutId='underline'
 					/>
 				)}

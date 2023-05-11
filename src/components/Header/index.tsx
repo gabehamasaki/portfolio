@@ -15,7 +15,7 @@ export function Header() {
 
 	useEffect(() => {
 		const handleScrollButtonVisibility = () => {
-			window.pageYOffset > 450 ? setShownButton(true) : setShownButton(false);
+			window.pageYOffset > 550 ? setShownButton(true) : setShownButton(false);
 		};
 		window.addEventListener('scroll', handleScrollButtonVisibility);
 
@@ -26,7 +26,7 @@ export function Header() {
 
 	return (
 		<>
-			<header className='fixed top-0 left-0 w-full h-20 border-b-2 backdrop-blur-xl bg-background/30'>
+			<header className='fixed top-0 left-0 w-full h-20  bg-background transition-all border-b border-rose/30'>
 				<div className='container h-full flex items-center justify-between max-md:justify-center'>
 					<motion.div
 						whileHover={{
@@ -55,7 +55,7 @@ export function Header() {
 			/>
 			<motion.div
 				animate={{ opacity: isShownButton ? 1 : 0 }}
-				className='w-16 h-16 rounded-full bg-secondary fixed bottom-8 right-8 flex items-center justify-center'
+				className='w-16 h-16 rounded-full bg-rose fixed bottom-8 right-8 flex items-center justify-center cursor-pointer'
 			>
 				<Link
 					to='top'

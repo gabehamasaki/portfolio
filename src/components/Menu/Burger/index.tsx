@@ -18,22 +18,35 @@ export default function Burger(props: MenuProps) {
 			<Container isOpen={isOpen}>
 				{isOpen && (
 					<motion.nav
-						className='mt-16'
+						className='mt-24 h-full'
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.2 }}
 					>
-						<motion.ul className='flex flex-col gap-4 items-center list-none'>
+						<motion.ul className='h-screen flex flex-col gap-4 items-center list-none'>
 							<AnimatePresence>
 								{items.map((item, index) => (
 									<Item
 										item={item}
 										selected={selected === index}
 										key={item}
-										onClick={() => setSelected(index)}
-										href={`#${item.split(' ')[0].toLowerCase()}`}
+										onClick={() => {
+											setSelected(index);
+											toggleOpen();
+										}}
+										href={`${item.split(' ')[0].toLowerCase()}`}
 									/>
 								))}
+								<div className='w-full px-8'>
+									<motion.button
+										whileHover={{
+											scale: 1.2,
+										}}
+										className='bg-rose w-full text-primary transition-all rounded-lg py-2 px-4 cursor-pointer'
+									>
+										Hire Me
+									</motion.button>
+								</div>
 							</AnimatePresence>
 						</motion.ul>
 					</motion.nav>
