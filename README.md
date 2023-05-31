@@ -1,4 +1,4 @@
-<h1 align="center">Next 13 Boilerplate</h1>
+<h1 align="center">Gabriel Hamasaki</h1>
 
 # About
 
